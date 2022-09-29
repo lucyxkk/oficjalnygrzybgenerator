@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jakim grzybem jestes?</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body style="background-color:powderblue;"> 
+        <audio src = "file:///Users/lucjakunikowska/Desktop/mizykagrzybow.mp4"controls>
+            
+        </audio>
+    <div>
+        <button type="Submit">Grzyb na dzis</button>
+        <h1>Grzyb na dzis</h1>
+        
+    </div>
+    <script>
+    let btnRandom = document.querySelector('button');
+let result = document.querySelector('h1');
+
+let grzybki = ['Borowik szlachetny', 'Podgrzybek', 'Pieczarka', 'Kozlarz babka', 'Muhomor', 'Kurka', 'Maslak', 'Boczniak', 'Pieczarka portobello', 'Rydz', 'Huba'];
+
+function getRandomNumber(min, max){
+    let step1 = max-min + 1;
+    let step2 = Math.random() * step1;
+    let result = Math.floor(step2) + min;
+
+    return result;
+
+}
+
+btnRandom.addEventListener('click', () => {
+    let index = getRandomNumber(0, grzybki.length-1);
+    result.innerText = grzybki[index];
+})
+    </script>
+    </body>
+</html>
