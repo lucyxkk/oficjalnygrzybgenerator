@@ -4,20 +4,31 @@
         <title>Jakim grzybem jestes?</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     </head>
     <body> 
-        <audio src = "mizykagrzybow.mp4"controls>
-            
-        </audio>
-    <div>
-        <button type="Submit">Grzyb na dzis</button>
-        <h1>Grzyb na dzis</h1>
+        <audio src = "mizykagrzybow.mp4"controls></audio>
+    <div class="desc">
+    <h1>Nie wiesz jakim grzybem jesteś?</h1>
+    <h2>Dowiedz się dziś!</h2>
         
     </div>
+
+    <div class="mushroom-item">
+        <p class="grzyb-random">Grzyb na dziś</p>
+        <button type="Submit">Grzyb na dzis</button>
+        
+    </div>
+    <div class="img">
+        <img class="grzyb-img" src="grzyb.png" alt="mushrooms">
+    </div>
+    
     <script>
     let btnRandom = document.querySelector('button');
-let result = document.querySelector('h1');
+let result = document.querySelector('p');
 
 let grzybki = ['Borowik szlachetny', 'Podgrzybek', 'Pieczarka', 'Kozlarz babka', 'Muhomor', 'Kurka', 'Maslak', 'Boczniak', 'Pieczarka portobello', 'Rydz', 'Huba'];
 
