@@ -5,46 +5,44 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="styles.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     </head>
     <body> 
-        <audio src = "mizykagrzybow.mp4"controls></audio>
-    <div class="desc">
-    <h1>Nie wiesz jakim grzybem jesteś?</h1>
-    <h2>Dowiedz się dziś!</h2>
-        
-    </div>
-
-    <div class="mushroom-item">
-        <p class="grzyb-random">Grzyb na dziś</p>
-        <button type="Submit">Grzyb na dzis</button>
-        
-    </div>
+       <!-- <audio src = "mizykagrzybow.mp4"controls></audio> -->
     <div class="img">
-        <img class="grzyb-img" src="grzyb.png" alt="mushrooms">
+        <img class="grzyb-img" src="fungi.png" alt="mushrooms">
     </div>
+
+    <div class="box">
+        <p id = "grzyb-random" class="grzyb-random">Grzyb na dziś</p>
+        <button onclick="getGrzybki(grzybki)" type="Submit">Grzyb na dzis</button>
+    </div>
+
     
-    <script>
-    let btnRandom = document.querySelector('button');
-let result = document.querySelector('p');
+    
+    
+//     <script>
+//     let btnRandom = document.querySelector('button');
+// let result = document.querySelector('p');
 
-let grzybki = ['Borowik szlachetny', 'Podgrzybek', 'Pieczarka', 'Kozlarz babka', 'Muhomor', 'Kurka', 'Maslak', 'Boczniak', 'Pieczarka portobello', 'Rydz', 'Huba'];
+// let grzybki = ['Borowik szlachetny', 'Podgrzybek', 'Pieczarka', 'Kozlarz babka', 'Muhomor', 'Kurka', 'Maslak', 'Boczniak', 'Pieczarka portobello', 'Rydz', 'Huba'];
 
-function getRandomNumber(min, max){
-    let step1 = max-min + 1;
-    let step2 = Math.random() * step1;
-    let result = Math.floor(step2) + min;
+// function getRandomNumber(min, max){
+//     let step1 = max-min + 1;
+//     let step2 = Math.random() * step1;
+//     let result = Math.floor(step2) + min;
 
-    return result;
+//     return result;
 
-}
+// }
 
-btnRandom.addEventListener('click', () => {
-    let index = getRandomNumber(0, grzybki.length-1);
-    result.innerText = grzybki[index];
-})
-    </script>
+// btnRandom.addEventListener('click', () => {
+//     let index = getRandomNumber(0, grzybki.length-1);
+//     result.innerText = grzybki[index];
+// })
+//     </script>
     </body>
 </html>
