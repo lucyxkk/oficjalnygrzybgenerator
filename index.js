@@ -1,17 +1,11 @@
 let grzybki = ['Borowik szlachetny', 'Podgrzybek', 'Pieczarka', 'Kozlarz babka', 'Muhomor', 'Kurka', 'Maslak', 'Boczniak', 'Pieczarka portobello', 'Rydz', 'Huba'];
 let length = grzybki.length;
-let btnRandom = document.getElementById('przyciskGrzyb');
+let btnRandom = document.querySelector('button');
 let result = document.querySelector('p')
 
-function getGrzybki (grzybki) {
+function getGrzybki() {
     let number = Math.floor(Math.random()*length);
     let result = grzybki[number];
-    return result;
+    document.querySelector(".grzyb-random").textContent = result;
 }
 
-btnRandom.addEventListener('click', () => {
-    let index = getGrzybki(grzybki);
-    result.innerText = grzybki[index];
-})
-
-getGrzybki(grzybki);
