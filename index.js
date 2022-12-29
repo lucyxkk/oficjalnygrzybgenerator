@@ -9,3 +9,8 @@ function getGrzybki() {
     document.querySelector(".grzyb-random").textContent = result;
 }
 
+document.querySelector("button").addEventListener("click", function () {
+    let music = new Audio("muzykagrzybow.mp4");
+    music.play();
+})
+        
